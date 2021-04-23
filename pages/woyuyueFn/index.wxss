@@ -1,0 +1,120 @@
+/* pages/woyuyueFn/index.wxss */
+.list_status{
+  padding: 30rpx 80rpx;
+  background: #F6F6F6;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+.list_vie{
+ margin: 0 20rpx;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+.kuai{
+  width: 20rpx;
+  height: 20rpx;
+  background: #29C3C7;
+  border-radius: 4rpx;
+  margin-right: 10rpx;
+}
+.kuai1{
+  width: 20rpx;
+  height: 20rpx;
+  background: #BBBBBB;
+  border-radius: 4rpx;
+  margin-right: 10rpx;
+
+}
+.kuai2{
+  width: 20rpx;
+  height: 20rpx;
+  border:1px solid #29C3C7;
+  border-radius: 4rpx;
+  margin-right: 10rpx;
+
+}
+.cont{
+  width: 94%;
+  padding:0 3%;
+  position: relative;
+  z-index: 10;
+  overflow-y:scroll ;
+  border-top-left-radius: 20rpx;
+  border-top-right-radius: 20rpx;
+  background:white;
+  /* height: 80%; */
+  /* margin-top: -90rpx; */
+  /* height: 1000rpx; */
+}
+.tit_tab{
+  width: 90%;
+  position: absolute;
+  left: 5%;
+  top: 160rpx;
+  display:flex;
+  font-size: 36rpx;
+  color: white;
+  justify-content: space-between;
+  align-items: center;
+}
+.title{
+  font-size: 38rpx;
+
+}
+.nums{
+  font-size: 38rpx;
+}
+.txt_tit{
+  width: 90%;
+  position: absolute;
+  left: 5%;
+  top: 230rpx;
+  color: white;
+}
+.txt_tit2{
+  width: 90%;
+  position: absolute;
+  left: 5%;
+  top: 280rpx;
+  color: white;
+}
+.lists{
+  width: 90%;
+  margin: 0 auto;
+  padding:20rpx 0;
+
+}
+.title_list{
+  width: 100%;
+  font-size: 34rpx;
+  padding:14rpx 0;
+}
+.list_btn{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20rpx 0;
+  margin-top: 30rpx;
+}
+.list_btn view{
+  width: 80%;
+  border-radius: 60rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 96rpx;
+  font-size:32rpx;
+}
+.tabBtn1{
+  background: #F6F6F6;
+  color: #767676;
+}
+.tabBtn2{
+  background: #29C3C7;
+  color: white;
+}

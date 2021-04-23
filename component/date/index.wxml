@@ -1,0 +1,93 @@
+<!-- <view class='box' style='position: relative;'>
+  <view class='left-choose'>选择时间:</view>
+  <view>
+    <view class="tips" wx:if='{{!isdate}}'>时间不能早于当前
+      <view class="triangle_border_right"></view>
+    </view>
+   
+    <view class="zan-cell zan-cell--access">
+      <view wx:if="{{date.dates}}" style='padding-right:30rpx;' class="zan-cell__ft" bindtap='showDate'>{{date.dates + '\t' + date.week + '\t' + hour + ':' + minute}}</view>
+      <view wx:if="{{!date.dates}}" style='padding-right:30rpx;' class="zan-cell__ft" bindtap='showDate'>{{dateList[0].dates + '\t' + dateList[0].week + '\t' + todayhour + ':' + todayminutes}}</view>
+      <view class='ft_right' style='border-color: #c8c8c8;'></view>
+    </view>
+  </view>
+</view> -->
+<view class="date_view">
+  <view class="viedclicktab" bindtap="clickFns" data-index="{{index}}" wx:for="{{dateList}}">
+    <view class="times_top {{tab_vie == index ?'activesd':'' }}" >{{item.week}}</view>
+    <view class="time_bot {{tab_vie == index ?'activesb':'' }}">{{item.dates}}</view>
+  </view>
+</view>
+<view class="text_lefts">
+    <view></view>
+    <view>左滑查看近7天 >></view>
+  </view>
+<view class="shangwu">
+  上午（ 9:00 - 12:00 ）
+</view>
+<view class="listcls">
+  <block wx:for="{{listdataTime}}">
+    <!-- <view wx:if="{{item.status==0}}" data-index="{{item.id}}" class="listtime {{timeactive==item.id&&timeactive?'active' :''}}" bindtap="clickTime" data-id="{{item.status}}" data-todayhour="{{item.hours}}" data-todayminutes="{{item.minutes}}">{{item.clock}}</view> -->
+    <!-- 不修改展示 -->
+    <block wx:if="{{!ischeknd}}">
+      <view wx:if="{{item.status==0}}" data-index="{{item.id}}" class="listtime {{item.isMent==1?'active' :''}}"
+        bindtap="clickTimedelit" data-clock="{{item.clock}}" data-user="{{item.userId}}" data-isment="{{item.isMent}}" data-id="{{item.status}}" data-todayhour="{{item.hours}}"
+        data-todayminutes="{{item.minutes}}">{{item.clock}}</view>
+  
+      <view wx:if="{{item.status==1}}" class="listtimes" bindtap="clickTimeshui" data-id="{{item.status}}">{{item.clock}}
+      </view>
+    </block>
+    <!-- 修改展示 -->
+  
+    <view wx:if="{{(item.isMent==0)&&ischeknd}}" class="listtime" bindtap="clickcheck"
+      data-id="{{item.id}}" data-status="{{item.status}}"> <radio checked="{{item.status==1?true:false}}"></radio> {{item.clock}}</view>
+      <view wx:if="{{(item.isMent==1)&&ischeknd}}" class="listtime active" bindtap="clickTimes"
+      data-id="{{item.id}}">{{item.clock}}</view>
+  </block>
+
+</view>
+<view class="shangwu">
+  下午（ 13:00 - 18:00 ）
+</view>
+<view class="listcls">
+  <block wx:for="{{afternoonList}}">
+    <!-- 不修改展示 -->
+    <block wx:if="{{!ischeknd}}">
+      <view wx:if="{{item.status==0}}" data-index="{{item.id}}" class="listtime {{item.isMent==1?'active' :''}}"
+        bindtap="clickTimedelit" data-clock="{{item.clock}}" data-user="{{item.userId}}" data-isment="{{item.isMent}}" data-id="{{item.status}}" data-todayhour="{{item.hours}}"
+        data-todayminutes="{{item.minutes}}">{{item.clock}}</view>
+  
+      <view wx:if="{{item.status==1}}" class="listtimes" bindtap="clickTimeshui" data-id="{{item.status}}">{{item.clock}}
+      </view>
+    </block>
+    <!-- 修改展示 -->
+  
+    <view wx:if="{{(item.isMent==0)&&ischeknd}}" class="listtime" bindtap="clickcheck"
+      data-id="{{item.id}}" data-status="{{item.status}}"> <radio checked="{{item.status==1?true:false}}"></radio> {{item.clock}}</view>
+      <view wx:if="{{(item.isMent==1)&&ischeknd}}" class="listtime active" bindtap="clickTimes"
+      data-id="{{item.id}}">  {{item.clock}}</view>
+  </block>
+</view>
+
+<view wx:if="{{showselect}}">
+  <picker-view indicator-style="height: 40px;z-index:1;" mask-style="z-index:1;" style="width: 100%;text-align: center; height: 120px;" value="{{value}}" bindchange="bindChange">
+    <picker-view-column>
+      <view wx:for="{{dateList}}" wx:key="index" style="line-height: 40px;font-size:14px;text-align: center;">{{item.dates + "\t" + item.week}}</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{hours}}" wx:key="index" style="line-height: 40px;font-size:14px;text-align: center;">{{item}}</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{minutes}}" wx:key="index" style="line-height: 40px;font-size:14px;text-align: center;">{{item}}</view>
+    </picker-view-column>
+  </picker-view>
+</view>
+<view class="list_btn" wx:if="{{!ischeknd}}">
+    <!-- <view class="tabBtn1" bindtap="baocunsx">保存下次再填</view> -->
+    <view class="tabBtn2" style="width:80%" bindtap="xiapageFn">修改预约时间段</view>
+  </view>
+  <view class="list_btn" wx:if="{{ischeknd}}">
+
+    <view class="tabBtn2" bindtap="bukesubmit">设为不可预约</view>
+        <view class="tabBtn1" bindtap="baocunsx">取消</view>
+  </view>

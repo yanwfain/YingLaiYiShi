@@ -1,0 +1,135 @@
+/*向右*/
+
+.triangle_border_right {
+  width: 0;
+  height: 0;
+  border-width: 5px 0 5px 8px;
+  border-style: solid;
+  border-color: transparent transparent transparent #f26b3a; /*透明 透明 透明 灰*/
+  position: absolute;
+  z-index: 2;
+  left: 170rpx;
+  top:10rpx;
+}
+
+.tips {
+  width: 175rpx;
+  height: 40rpx;
+  font-size: 20rpx;
+  background-color: #f26b3a;
+  color: #fff;
+  position: absolute;
+  z-index: 2;
+  left: 230rpx;
+  top: 25rpx;
+  border-radius: 5rpx;
+  text-align: center;
+  line-height: 40rpx;
+}
+.box{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.date_view{
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+
+}
+.viedclicktab{
+  width: 300rpx;
+  text-align: center;
+  padding:20rpx;
+}
+.times_top{
+  padding: 6rpx;
+  color: gray;
+}
+.time_bot{
+  font-size: 22rpx;
+  color: gray;
+  padding-bottom: 10rpx;
+  border-bottom: 8rpx solid white;
+}
+.activesd{
+  color:black;
+}
+.activesb{
+ border-bottom: 8rpx solid #29C3C7;
+}
+.text_lefts{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0 auto;
+}
+.text_lefts view{
+  font-size: 22rpx;
+  color: gray;
+}
+.shangwu{
+  margin: 20rpx 0;
+}
+.listcls{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20rpx;
+}
+.listtime{
+  width: 30%;
+  margin: 1%;
+  border:1px solid #29C3C7;
+  padding:14rpx 0;
+  text-align: center;
+  font-size: 32rpx;
+  color: #767676;
+  border-radius: 14rpx;
+}
+.listtimes{
+  width: 30%;
+  margin: 1%;
+  border:1px solid #c2c2c2;
+  padding:14rpx 0;
+  text-align: center;
+  font-size: 32rpx;
+  background: #c2c2c2;
+  color: #767676;
+  border-radius: 14rpx;
+}
+
+
+.active{
+  color: white;
+  background: #29C3C7;
+}
+.list_btn{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20rpx 0;
+  margin-top: 30rpx;
+}
+.list_btn view{
+  width: 48%;
+  margin: 1%;
+  border-radius: 60rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 96rpx;
+  font-size:32rpx;
+}
+.tabBtn1{
+  background: #F6F6F6;
+  color: #767676;
+}
+.tabBtn2{
+  background: #29C3C7;
+  color: white;
+}

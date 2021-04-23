@@ -1,0 +1,17 @@
+<!-- <view class="tit_time">2020年12月10日  11:18</view> -->
+<view class="list" wx:for="{{movieList}}" data-id="{{item.id}}">
+  
+  <view class="title">{{item.title}}</view>
+  <view class="titles">{{item.description}}</view>
+  <view class="times">{{item.createTime}}</view>
+  <view class="botmbtn">
+    <view></view>
+    <view class="btnsubmit"> 操作 <image src="../../image/5.png"></image></view>
+  </view>
+</view>
+
+<!-- <view class="meis">没有更多内容了</view> -->
+<view class="images" wx:if="{{movieList.length==0}}">
+  <image src="http://47.94.16.158:8001/181.png"></image>
+  <view class="meis">暂无消息</view>
+</view>

@@ -1,0 +1,41 @@
+/* pages/logo/index.wxss */
+.topBack{
+  width: 100%;
+  height: 370px;
+}
+.topBack image{
+  width: 100%;
+  height: 100%;
+}
+.cont{
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 50rpx;
+}
+.list{
+  border-bottom:1px solid #CAE3E4;
+  display: flex;
+  align-items: center;
+  padding: 14rpx 0;
+}
+.list input{
+  font-size: 36rpx;
+  width:84%;
+  padding: 3%;
+
+}
+.list image{
+  width: 56rpx;
+  height: 56rpx;
+}
+.btnlogo{
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 50rpx;
+  line-height: 94rpx;
+  text-align: center;
+  border-radius: 60rpx;
+  background: #29C3C7;
+  color: white;
+  font-size: 34rpx;
+}

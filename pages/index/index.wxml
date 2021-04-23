@@ -1,0 +1,97 @@
+<!--index.wxml-->
+<!-- <view class="container">
+  <view class="userinfo">
+    <block wx:if="{{canIUseOpenData}}" calss="userinfo-opendata">
+      <view class="userinfo-avatar" bindtap="bindViewTap">
+        <open-data type="userAvatarUrl"></open-data>
+      </view>
+      <open-data type="userNickName"></open-data>
+    </block>
+    <block wx:elif="{{!hasUserInfo}}">
+      <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 获取头像昵称 </button>
+      <button wx:elif="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+      <view wx:else> 请使用1.4.4及以上版本基础库 </view>
+    </block>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+</view> -->
+
+<view class="Shouquan" wx:if="{{!hasUserInfo}}">
+	<view class="chaX" bindtap="ggopfn"> × </view>
+	<view class="logo">
+		<image src="../../image/logo.png"></image>
+	</view>
+	<view class="logoTxt">盈来健康</view>
+	<button class="butn_bottys"  open-type="getUserInfo" bindtap='getUserProfile'>微信授权</button>
+	<view class="zhanbuNo" bindtap="ggopfn">暂不登录</view>
+</view>
+<view class="opsbjc" wx:if="{{!hasUserInfo}}" bindtap="ggopfns"></view>
+<view class="topbank">
+  <image src="http://47.94.16.158:8001/222.png"></image>
+  <view class="titlrPage" style="top:{{statusBarHeight+10}}px">盈来健康医师端</view>
+</view>
+<view class="list_status">
+  <view class="status">当前状态：
+    <block wx:if="{{userlist.online==0}}">在线中</block>
+    <block wx:if="{{userlist.online==1}}">离线</block>
+  </view>
+  <view class="statusbtn" wx:if="{{userlist.online==0}}" bindtap="binyijFn" data-id="1">一键休息</view>
+  <view class="statusbtn" wx:if="{{userlist.online==1}}" bindtap="binyijFns" data-id="0">立即上线</view>
+</view>
+<view class="cont_user">
+  <view class="left_user">
+    <image
+      src="{{userlist.headimg}}">
+    </image>
+    <view class="usrs">
+      <view class="username">{{userlist.realName}}</view>
+      <view class="hotUset">{{userlist.technical}}</view>
+    </view>
+  </view>
+  <view class="liaolistNum">
+    <view class="listliaonum" wx:if="{{userlist.msgNum>0}}"> {{userlist.msgNum}} </view>
+    <image bindtap="liaolist" src="../../image/10.png"></image>
+  </view>
+</view>
+<view class="cont_lund">
+  <image class="logos" src="http://47.94.16.158:8001/223.png"></image>
+  <view class="marquee_container" style="--marqueeWidth--:-15em">
+    <view class="marquee_text">公告：在线咨询功能将在2月18日开通！请医师们快点啊</view>
+  </view>
+  <image class="deles" src="http://47.94.16.158:8001/28.png"></image>
+</view>
+<view class="listab">
+  <view class="listve" bindtap="melist">
+    <image src="http://47.94.16.158:8001/224.png"></image>
+    <view class="titxt">我的患者</view>
+  </view>
+  <view class="listve" bindtap="listuserFn">
+    <image src="http://47.94.16.158:8001/225.png"></image>
+    <view class="titxt">在线咨询</view>
+  </view>
+  <view class="listve" bindtap="woyuyueFn">
+    <image src="http://47.94.16.158:8001/226.png"></image>
+    <view class="titxt">我的预约</view>
+  </view>
+  <view class="listve" bindtap="userdelitFn">
+    <image src="http://47.94.16.158:8001/227.png"></image>
+    <view class="titxt">我的信息</view>
+  </view>
+</view>
+<view class="tit_cnts">数据概览</view>
+<view class="lisshujuli">
+  <view class="lits">
+    <view class="tst_name">总患者数</view>
+    <view class="tst_num">{{userlist.allPatientsNum?userlist.allPatientsNum:'0'}}</view>
+  </view>
+  <view class="lits">
+    <view class="tst_name">目前患者数</view>
+    <view class="tst_num">{{userlist.patientsNum?userlist.patientsNum:'0'}}</view>
+  </view>
+</view>

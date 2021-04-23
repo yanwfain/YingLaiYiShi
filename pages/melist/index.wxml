@@ -1,0 +1,75 @@
+<view class="txt_jt" bindtap="notiro" style="top:{{statusBarHeight+15}}px"></view>
+<view bindtap="notiro" style="width:50%;height:60rpx;position: fixed;z-index: 999;left:0;top:{{statusBarHeight+15}}px">
+</view>
+<view class="topbank">
+  <view class="title_page" style="top:{{statusBarHeight+10}}px">我的患者 {{total?total:'0'}}人</view>
+</view>
+<view class="top_btncont">
+  <view class="imgsearc">
+    <image src="http://47.94.16.158:8001/229.png"></image>
+    <input type="text" placeholder="搜索患者名字" bindconfirm="bindconfirm" confirm-type='search' placeholder="搜索" value="{{keyword}}" />
+  </view>
+  <view class="listtabs" bindtap="times">
+   
+      <view class="picker">
+        时间
+      </view>
+   
+    <view class="sanjiao" wx:if="{{!times}}"></view>
+    <view class="sanjiao1" wx:if="{{times}}"></view>
+  </view>
+  <view class="listtabs" bindtap="nianl">
+
+      <view class="txt" style="">
+        年龄
+      </view>
+  
+    <view class="sanjiao" wx:if="{{!nianl}}"></view>
+    <view class="sanjiao1" wx:if="{{nianl}}"></view>
+  </view>
+</view>
+<block wx:for="{{movieList}}">
+  <view class="border"></view>
+<view class="toptitle">
+  <!-- <view class="tit_yuy">预约患者</view> -->
+  <view class="lisycot">
+    <view class="code">{{item.code}}</view>
+    <view class="yonghu" bindtap="clckFn" data-id="{{item.userId}}">{{item.campLabelsName?item.campLabelsName:'设置标签'}}</view>
+  </view>
+  <view class="user">
+    <image mode="aspectFill" class="headimg" src="{{item.headImg}}"></image>
+    <view class="user_dlelt">
+      <view class="name">{{item.userName}}</view>
+      <view class="time_user">入营时间 {{item.campTime}}</view>
+    </view>
+  </view>
+  <view class="listbtn">
+    <view class="listml">健康档案</view>
+    <view class="listml">患者数据</view>
+    <view class="listml">饮食日记</view>
+    <view class="listml">用药记录</view>
+    <view class="listml">数据任务</view>
+    <view class="listml">专家讲堂</view>
+    <view class="listml">心理疗愈</view>
+    <view class="listml">饮食问卷</view>
+    <view class="listml">备注</view>
+    <view class="listml" data-userid="{{item.userId}}" bindtap="switchToChating">在线咨询</view>
+    <view class="listml" data-id="{{item.userId}}" bindtap="clckFn">设置标签</view>
+    <view class="listml" data-id="{{item.userId}}" wx:if="{{item.status==2}}" bindtap="videoWan">完成问诊</view>
+    <view style="width:31%"  wx:if="{{item.status!=2}}"  bindtap=""></view>
+
+  </view>
+</view>
+
+</block>
+<view style="font-size:32rpx;padding:30rpx;text-align:center;color:gray">没有更多数据了</view>
+<block wx:if="{{isbiao}}">
+  <view class="backopction" bindtap="guanzbi"></view>
+  <view class="bottom_lops">
+    <view class="title_bobbm">标签选择</view>
+    <view class="biaolist">
+      <view wx:for="{{liaobiao}}"  class="viewlis {{item.chenk?'active':''}}" data-chenk="{{item.chenk}}" data-id="{{item.id}}" bindtap="clickbiao">{{item.name}}</view>
+    </view>
+   <view class="biaosubmit" bindtap="biaosub">保存</view>
+  </view>
+</block>

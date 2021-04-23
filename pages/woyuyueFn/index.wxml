@@ -1,0 +1,17 @@
+<view class="list_status">
+  <view class="list_vie"><view class="kuai"></view>已预约</view>
+  <view class="list_vie"><view class="kuai1"></view>不可预约</view>
+  <view class="list_vie"><view class="kuai2"></view>未预约</view>
+</view>
+<view class="cont">
+  <view class="lists">
+    <!-- <view class="title_list">选择时间</view> -->
+    <view>
+      <my-date bind:bindSelect="bindSelect"></my-date>
+    </view>
+  </view>
+  <!-- <view class="list_btn">
+    <view class="tabBtn2" bindtap="xiapageFn">修改预约时间段</view>
+  </view> -->
+  <view style="height:100px"></view>
+</view>

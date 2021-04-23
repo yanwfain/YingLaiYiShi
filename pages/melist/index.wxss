@@ -1,0 +1,199 @@
+/* pages/melist/index.wxss */
+
+.txt_jt {
+  position: fixed;
+  left: 40rpx;
+  width: 12px;
+  height: 12px;
+  border-top: 2px solid black;
+  border-right: 2px solid black;
+  transform: rotate(225deg);
+  z-index: 999;
+}
+
+.topbank {
+  width: 100%;
+  
+}
+.topbank image{
+  width: 100%;
+  height: 100%;
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.title_page{
+  width: 100%;
+  position: absolute;
+  z-index: 2;
+  left:0;
+  color: black;
+  font-size: 32rpx;
+  text-align: center;     
+}
+.top_btncont{
+  padding: 20rpx;
+  margin-top: 100rpx;
+  display: flex;
+  align-items: center;
+  margin-top: 140rpx;
+}
+.imgsearc{
+  display: flex;
+  justify-content: center;
+  padding: 10rpx 20rpx;
+  align-items: center;
+  background: #EFEFEF;
+  border-radius: 60rpx;
+  margin-right: 16rpx;
+}
+.imgsearc image{
+  width: 36rpx;
+  height: 36rpx;
+  margin-right: 10rpx;
+}
+.imgsearc input{
+  font-size:28rpx;
+  color: #767676;
+  padding: 4rpx;
+  width: 180rpx;
+
+}
+.listtabs{
+  width: 200rpx;
+  display: flex;
+  align-items: center;
+  /* margin: 0 20rpx; */
+  justify-content: center;
+}
+.sanjiao{
+  width:0;
+height:0;
+border:7px solid transparent;  
+border-top-color:#BBBBBB;
+margin-top: 14rpx;
+margin-left:10rpx
+}
+.sanjiao1{
+  width:0;
+height:0;
+border:7px solid transparent;  
+border-bottom-color:#BBBBBB;
+margin-top: -14rpx;
+margin-left:10rpx
+}
+.toptitle{
+  padding: 30rpx;
+
+}
+.tit_yuy{
+  font-size:34rpx;
+  padding-bottom: 20rpx;
+}
+.times{
+  font-size:36rpx;
+  padding-bottom: 20rpx;
+}
+.lisycot{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20rpx;
+}
+.code{
+  font-size:24rpx;
+  color: #767676;
+}
+.yonghu{
+  font-size: 24rpx;
+  color: #191919;
+}
+.user{
+  display: flex;
+  align-items: center;
+  padding-bottom: 20rpx;
+}
+.headimg{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 100%;
+}
+.user_dlelt{
+  width: 70%;
+  margin-left: 2%;
+
+
+}
+.name{
+  font-size: 36rpx;
+  font-weight: 600;
+}
+.time_user{
+  margin-top:10rpx;
+  font-size: 24rpx;
+  color: #767676;
+}
+.listbtn{
+  padding-bottom: 20rpx;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  
+}
+.txt{
+  text-align: center;
+}
+.listml{
+  width: 31%;
+  text-align: center;
+  color: white;
+  font-size: 32rpx;
+  border-radius: 6rpx;
+  padding: 20rpx 0;
+  background: #29C3C7;
+  margin: 2% 0;
+}
+.bottom_lops{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 94%;
+  padding: 5% 3%;
+  background: white;
+  z-index: 10;
+
+}
+.title_bobbm{
+  font-size:32rpx;
+  margin-bottom: 20rpx;
+}
+.biaolist{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: space-between; */
+}
+.viewlis{
+  padding: 10rpx 24rpx;
+  border:1px solid #29C3C7;
+  color: #29C3C7;
+  border-radius: 60rpx;
+
+  margin:20rpx;
+}
+.active{
+  background:#29C3C7;
+  color: white;
+}
+.biaosubmit{
+  margin: 0 auto;
+  width: 98%;
+  margin-top: 150rpx;
+  padding: 30rpx 0;
+  background: #29C3C7;
+  color: white;
+  text-align: center;
+  border-radius: 60rpx;
+  font-size:32rpx;
+}

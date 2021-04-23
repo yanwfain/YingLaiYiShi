@@ -1,0 +1,77 @@
+/* pages/xiaoximessg/index.wxss */
+page{
+  background: #F6F6F6;
+}
+.list{
+  width: 86%;
+  padding: 24rpx;
+  background: white;
+  box-shadow: 1px 2px 6px #E0E0E0;
+  margin: 0 auto;
+  margin-top: 20rpx;
+  border-radius: 16rpx;
+}
+.title{
+  font-size:34rpx;
+  font-weight: 600;
+  margin-bottom: 10rpx;
+
+}
+.titles{
+  font-size:30rpx;
+  overflow: hidden;
+  text-overflow:ellipsis; white-space: nowrap;
+}
+.times{
+  margin-top: 10rpx;
+  font-size:26rpx;
+  color: #767676;
+}
+.meis{
+  color: #BBBBBB;
+  text-align: center;
+  margin-top: 20rpx;
+}
+.images{
+  padding-top: 230rpx;
+  text-align: center;
+}
+.images image{
+  width: 160rpx;
+  height: 160rpx;
+}
+.botmbtn{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+.btnsubmit{
+  padding: 10rpx 30rpx;
+  color: white;
+  border-radius: 60rpx;
+  background: #29C3C7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btnsubmit image{
+  width: 30rpx;
+  height: 30rpx;
+  margin-left: 4rpx;
+}
+.tit_time{
+  display: flex;
+  width: 350rpx;
+  font-size: 26rpx;
+  color: #767676;
+  background: #EEEEEE;
+  border-radius: 60rpx;
+  margin: 0 auto;
+  text-align: center;
+  padding: 18rpx 0;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  text-align: center;
+  justify-content: center;
+}

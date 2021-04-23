@@ -1,0 +1,33 @@
+<view class="toptitle">
+  <view class="tit_yuy">预约时间</view>
+  <view class="times">{{day}} {{clock}}</view>
+</view>
+<view class="border"></view>
+<view class="toptitle">
+  <view class="tit_yuy">预约患者</view>
+  <view class="lisycot">
+    <view class="code">YLHZ20201209123</view>
+    <view class="yonghu">{{list.campLabels}}</view>
+  </view>
+  <view class="user">
+    <image mode="aspectFill" class="headimg" src="{{list.headImg}}"></image>
+    <view class="user_dlelt">
+      <view class="name">{{list.userName}}</view>
+      <view class="time_user">入营时间 {{list.campTime}}</view>
+    </view>
+  </view>
+  <view class="listbtn">
+    <view class="listml">健康档案</view>
+    <view class="listml">患者数据</view>
+    <view class="listml">饮食日记</view>
+    <view class="listml">用药记录</view>
+    <view class="listml">数据任务</view>
+    <view class="listml">专家讲堂</view>
+    <view class="listml">心理疗愈</view>
+    <view class="listml">饮食问卷</view>
+    <view class="listml">备注</view>
+    <view class="listml" bindtap="switchToChating">在线咨询</view>
+    <view class="listml" wx:if="{{list.status==2}}" bindtap="videoWan">完成问诊</view>
+    <view style="width:31%"></view>
+  </view>
+</view>

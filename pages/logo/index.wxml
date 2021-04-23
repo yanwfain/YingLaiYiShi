@@ -1,0 +1,17 @@
+<view class="topBack">
+  <image mode="aspectFill" src="http://47.94.16.158:8001/219.png"></image>
+</view>
+<view class="cont">
+  <view class="list">
+    <input type="text" placeholder="手机号/用户名" bindinput="inpvale" value="{{inpvale}}" />
+  </view>
+  <view class="list" wx:if="{{!tishow}}">
+    <input type="password" placeholder="密码" bindinput="inpvalePasd" value="{{inpvalePasd}}" />
+    <image bindtap="clickFn"  src="http://47.94.16.158:8001/220.png"></image>
+  </view>
+  <view class="list" wx:if="{{tishow}}">
+    <input type="text" placeholder="密码" bindinput="inpvalePasd" value="{{inpvalePasd}}" />
+    <image bindtap="clickFn"  src="http://47.94.16.158:8001/221.png"></image>
+  </view>
+</view>
+<view class="btnlogo" bindtap="logoFn">登录</view>

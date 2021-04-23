@@ -1,0 +1,114 @@
+/* pages/userdelit/index.wxss */
+.topbank {
+  width: 100%;
+  height:190px;
+  /* background:url(http://yt.baike360.cn/index/images/1.png) no-repeat ; */
+  background-size: 100% 100%;
+  position: relative;
+}
+
+.topbank image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+}
+.titlrPage{
+  width: 100%;
+  text-align: center;
+  font-size: 36rpx;
+  position: absolute;
+  left: 0;
+  z-index: 2;
+  color: white;
+}
+
+.txt_jt {
+  position: fixed;
+  left: 40rpx;
+  width: 12px;
+  height: 12px;
+  border-top: 2px solid white;
+  border-right: 2px solid white;
+  transform: rotate(225deg);
+  z-index: 999;
+}
+.userIMg{
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 100%;
+  overflow: hidden;
+  margin: 0 auto;
+  margin-top: -80rpx;
+  position: relative;
+  z-index: 3;
+}
+.userIMg image{
+  width: 100%;
+  height: 100%;
+}
+.conts{
+  padding: 30rpx;
+
+}
+.jbtitl{
+  font-size:34rpx;
+  font-weight: 600;
+  padding-bottom: 30rpx;
+}
+.list{
+  padding: 24rpx 0;
+  border-bottom:1px solid #EEEEEE;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+.left{
+  font-size: 32rpx;
+
+}
+.name{
+  width: 70%;
+  font-size: 32rpx;
+  font-weight: 600;
+  text-align: right;
+}
+.left1{
+  font-size: 34rpx;
+  font-weight: 600;
+}
+.suibtn{
+  padding: 8rpx 34rpx;
+  color: #15A7AA;
+  border-radius: 60rpx;
+  border:1px solid #29C3C7;
+}
+.suibtn1{
+  padding: 8rpx 34rpx;
+  color: white;
+  border-radius: 60rpx;
+  background: #29C3C7;
+
+  border:1px solid #29C3C7;
+
+}
+picker{
+  width: 68%;
+
+}
+.picker{
+  text-align: right;
+  font-size: 32rpx;
+  font-weight: 600;
+}
+.btn{
+  padding: 100rpx 0;
+  text-align: center;
+  padding-bottom: 160rpx;
+  background: #F6F6F6;
+  color: #15A7AA;
+  font-size: 34rpx;
+}

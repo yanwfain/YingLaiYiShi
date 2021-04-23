@@ -1,0 +1,51 @@
+{
+  "pages":[
+    "pages/logo/index",
+    "pages/melist/index",
+    
+    "pages/index/index",
+    "pages/listuserzi/index",
+    "pages/imuserdelit/index",
+    "pages/woyuyueFn/index",
+    "pages/yuyuedelit/index",
+    "pages/messageList/index",
+    "pages/userdelit/index",
+    "pages/listlogo/index",
+
+    "pages/logs/logs"
+  ],
+  "subpackages": [
+    {
+      "root": "partials",
+      "pages": [
+        "personcard/personcard",
+        "modifyAccountInfo/modifyAccountInfo",
+        "groupList/groupList",
+        "advancedGroupCard/advancedGroupCard",
+        "normalGroupCard/normalGroupCard",
+        "chooseContact/chooseContact",
+        "announcement/announcement",
+        "advancedGroupMember/advancedGroupMember",
+        "advancedGroupMemberCard/advancedGroupMemberCard",
+        "blacklist/blacklist",
+        "strangercard/strangercard",
+        "addFriendOrGroup/addFriendOrGroup",
+        "chating/chating",
+        "messageNotification/messageNotification",
+        "historyFromCloud/historyFromCloud",
+        "forwardContact/forwardContact",
+        "videoCall/videoCall",
+        "forwardMultiContact/forwardMultiContact",
+        "videoCallMeeting/videoCallMeeting"
+      ]
+    }
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle":"black"
+  },
+
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,91 @@
+<view class="topbank">
+  <image src="http://47.94.16.158:8001/228.png"></image>
+  <view class="titlrPage" style="top:{{statusBarHeight+10}}px">我的信息</view>
+</view>
+<view class="txt_jt" bindtap="notiro" style="top:{{statusBarHeight+15}}px"></view>
+<view bindtap="notiro" style="width:50%;height:60rpx;position: fixed;z-index: 999;left:0;top:{{statusBarHeight+15}}px">
+</view>
+<view class="userIMg">
+  <image src="{{userlist.headimg}}"></image>
+</view>
+<view class="conts">
+  <view class="jbtitl">基本信息</view>
+  <view class="list">
+    <view class="left">姓名</view>
+    <view class="name">{{userlist.realName}}</view>
+  </view>
+  <view class="list">
+    <view class="left">职位</view>
+    <view class="name" wx:if="{{userlist.type==0}}">主医师</view>
+    <view class="name" wx:if="{{userlist.type==1}}"> 副医师</view>
+    <view class="name" wx:if="{{userlist.type==2}}">营养师</view>
+  </view>
+  <view class="list">
+    <view class="left">职称</view>
+    <view class="name">{{userlist.technical}}</view>
+  </view>
+  <view class="list">
+    <view class="left">性别</view>
+    <view class="name" wx:if="{{userlist.sex==0}}">男</view>
+    <view class="name" wx:if="{{userlist.sex==1}}">女</view>
+    <view class="name" wx:if="{{userlist.sex==2}}">未知</view>
+  </view>
+  <view class="list">
+    <view class="left">年龄</view>
+    <view class="name">{{userlist.age}}岁</view>
+  </view>
+  <view class="list">
+    <view class="left">加入平台时间</view>
+    <view class="name">{{userlist.addTime}}</view>
+  </view>
+  <view class="list" style="border:none;padding-top:100rpx">
+    <view class="left1">联系方式</view>
+    <view class="suibtn" bindtap="backlisfn" wx:if="{{!xuiishiw}}">修改</view>
+    <view class="suibtn1" bindtap="backlisfns" wx:if="{{xuiishiw}}">保存</view>
+  </view>
+  <block wx:if="{{!xuiishiw}}">
+    <view class="list">
+      <view class="left">手机号</view>
+      <view class="name">{{userlist.contactPhone}}</view>
+    </view>
+    <view class="list">
+      <view class="left">城市地区</view>
+      <view class="name"> {{userlist.city}}</view>
+    </view>
+    <view class="list">
+      <view class="left">详细地址</view>
+      <view class="name">{{userlist.address}}</view>
+    </view>
+
+  </block>
+  <block wx:if="{{xuiishiw}}">
+    <view class="list">
+      <view class="left">手机号</view>
+      <input type="text" class="name" bindinput="contactPhone" value="{{userlist.contactPhone}}" name="" id="" />
+      <!-- <input class="name">{{userlist.contactPhone}}</view> -->
+    </view>
+    <view class="list">
+      <view class="left">城市地区</view>
+      <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+        <view class="picker">
+          <block wx:if="{{region[0]}}">
+            {{region[0]}}/{{region[1]}}/{{region[2]}}
+          </block>
+          <block wx:if="{{!region[0]&&userlist.city}}">
+            {{userlist.city}}
+          </block>
+          <block wx:if="{{!region[0]&&!userlist.city}}">
+            选择省 / 市 / 区
+          </block>
+        </view>
+      </picker>
+    </view>
+    <view class="list">
+      <view class="left">详细地址</view>
+      <input type="text" class="name" bindinput="address" value="{{userlist.address?userlist.address:''}}" name="" id="" />
+    </view>
+  </block>
+</view>
+<view class="btn" bindtap="deleFns">
+  退出登录
+</view>

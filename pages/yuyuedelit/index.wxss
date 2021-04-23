@@ -1,0 +1,69 @@
+/* pages/yuyuedelit/index.wxss */
+.toptitle{
+  padding: 30rpx;
+
+}
+.tit_yuy{
+  font-size:34rpx;
+  padding-bottom: 20rpx;
+}
+.times{
+  font-size:36rpx;
+  padding-bottom: 20rpx;
+}
+.lisycot{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20rpx;
+}
+.code{
+  font-size:24rpx;
+  color: #767676;
+}
+.yonghu{
+  font-size: 24rpx;
+  color: #191919;
+}
+.user{
+  display: flex;
+  align-items: center;
+  padding-bottom: 20rpx;
+}
+.headimg{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 100%;
+}
+.user_dlelt{
+  width: 70%;
+  margin-left: 2%;
+
+
+}
+.name{
+  font-size: 36rpx;
+  font-weight: 600;
+}
+.time_user{
+  margin-top:10rpx;
+  font-size: 24rpx;
+  color: #767676;
+}
+.listbtn{
+  padding-bottom: 20rpx;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  
+}
+.listml{
+  width: 31%;
+  text-align: center;
+  color: white;
+  font-size: 32rpx;
+  border-radius: 6rpx;
+  padding: 20rpx 0;
+  background: #29C3C7;
+  margin: 2% 0;
+}
